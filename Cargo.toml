@@ -1,0 +1,20 @@
+[package]
+name = "armv8m_test"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["staticlib"]
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+opt-level = "s"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+cty = "0.2.2"
+cstr_core = "0.2.6"
+crc = "3.0.1"
